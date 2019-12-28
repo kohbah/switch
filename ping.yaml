@@ -1,7 +1,5 @@
 ---
 - hosts: all
   become: yes
-  ansible_username: admin
-  ansible_password: 4rfv$RFV
   tasks:
    - ping:
