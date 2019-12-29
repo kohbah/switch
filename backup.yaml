@@ -7,9 +7,6 @@
      ios_command:
       commands:
       - show run 
-     host: "{{ ansible_host }}"
-     register: config
-      
    - name: save output to /etc/ansible/backups 
      copy: 
       content: "{{ config.stdout[0] }}"
