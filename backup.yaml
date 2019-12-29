@@ -1,0 +1,12 @@
+---
+- hosts: all
+  gather_facts: true
+  connection: local
+  tasks:
+   - name: configurable backup path
+     ios_config:
+      src: ios_template.j2
+      backup: yes
+      backup_options:
+        filename: backup.cfg
+        dir_path: /home/awx
