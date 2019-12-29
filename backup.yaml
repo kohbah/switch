@@ -9,6 +9,4 @@
       commands:
        - show run 
    - name: save output to /etc/ansible/backup 
-     copy: 
-      content: "{{ config.stdout[0] }}"
-     dest: "/etc/ansible/backup/show_run_{{ inventory_hostname }}.txt"
+     copy: content={{ config.stdout[0] }} dest=/etc/ansible/backup/show_run_{{ inventory_hostname }}.txt
