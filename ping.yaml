@@ -1,9 +1,6 @@
 ---
-- hosts: all
-  ansible_connection: network_cli
-  ansible_network_os: ios
-  ansible_pass: 4rfv$RFV
-  ansible_user: admin
+- hosts: layer2
+  gather_facts: true
   connection: local
   tasks:
    - ping:
