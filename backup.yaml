@@ -8,11 +8,6 @@
      ios_command:
       commands:
        - show run 
-     host: "{{ ansible_host }}"
-     username: admin
-     password: 4rfv$RFV
-     register: config
-
    - name: save output to /etc/ansible/backup 
      copy: 
       content: "{{ config.stdout[0] }}"
