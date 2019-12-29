@@ -1,6 +1,7 @@
 ---
 - hosts: layer2
   gather_facts: true
+  ansible_user: admin
   connection: local
   tasks:
    - ping:
