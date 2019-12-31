@@ -1,0 +1,31 @@
+---
+- hosts: 10.4.50.50
+  user: administrator@vsphere.local
+  tasks:
+   - name:  Clone a virtual machine from Linux template and customize
+     vmware_guest:
+      hostname: 10.4.50.50
+      username: administrator@vsphere.local
+      password: 43erfdcv$#ERFDCV
+      validate_certs: no
+      datacenter: enclave4
+      state: present
+      folder: /DC1/vm
+      template: docker
+      name: gitlab
+      cluster: Compute-Cluster-01
+      networks:
+        - name: 480-Devops
+          ip: 10.4.80.10
+          netmask: 255.255.255.0
+          gateway: 10.4.80.254
+      wait_for_ip_address: True
+      customization:
+        domain: example.com
+        dns_servers:
+          - 8.8.8.8
+          - 8.8.4.4
+        dns_suffix:
+          - example.com
+          - example2.com
+    delegate_to: e4h3.e4.sclr.lab
