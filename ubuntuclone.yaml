@@ -1,6 +1,7 @@
 ---
 - hosts: 10.4.50.50
   user: administrator@vsphere.local
+  connection: local
   tasks:
    - name:  Clone a virtual machine from Linux template and customize
      vmware_guest:
