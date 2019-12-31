@@ -10,6 +10,8 @@
       password: 43erfdcv$#ERFDCV
       validate_certs: no
       datacenter: enclave4
+      state: present
+      folder: Discovered virtual machine
       template: docker
       name: gitlab
       cluster: Compute-Cluster-01
