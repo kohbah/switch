@@ -1,5 +1,5 @@
 ---
-- hosts: layer2
+- hosts: all
   gather_facts: true
   connection: local
   tasks:
