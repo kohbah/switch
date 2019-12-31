@@ -10,8 +10,6 @@
       password: 43erfdcv$#ERFDCV
       validate_certs: no
       datacenter: enclave4
-      state: present
-      folder: /DC1/vm
       template: docker
       name: gitlab
       cluster: Compute-Cluster-01
@@ -29,4 +27,4 @@
         dns_suffix:
           - example.com
           - example2.com
-     delegate_to: e4h3.e4.sclr.lab
+     delegate_to: localhost
